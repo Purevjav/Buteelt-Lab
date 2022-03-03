@@ -126,7 +126,7 @@ public class LinkedQueue implements Queue {
 					break;
 				case "empty":	System.out.println(bool.isEmpty());
 					break;
-				case "add":	System.out.println("How many number input? Enter your number: ");
+				case "add":	System.out.println("Хэдэн тоо оруулах вэ?: ");
 				int p = king.nextInt();
 				for(int k=0;k<p;k++)
 				{
@@ -138,6 +138,12 @@ public class LinkedQueue implements Queue {
 					break;
 				case "show": 	System.out.println("Recent Queue: "); bool.showQueue();
 					break;
+				case "exit": {
+					king.close(); 
+					System.exit(0); 
+					break;
+					}
+					
 				}
 			}
 		}catch(Exception e) {
@@ -153,6 +159,7 @@ public class LinkedQueue implements Queue {
 		System.out.println(" add    :  element nemeh");
 		System.out.println(" remove :  element ustgah");
 		System.out.println(" show   :  queue harah");
+		System.out.println(" exit   :  garah");
 	}
 
 
