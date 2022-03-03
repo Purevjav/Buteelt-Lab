@@ -7,4 +7,5 @@ public interface Queue
    public Object getRearElement();
    public void put(Object theObject);
    public Object remove();
+   public void showQueue();
    }
