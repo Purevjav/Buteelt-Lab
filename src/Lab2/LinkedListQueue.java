@@ -1,7 +1,5 @@
 package Lab2;
 import java.util.*;
-
-import buteelt.LinkedQueue;
  
 class LinkedListQueue<T> {
     
@@ -82,7 +80,7 @@ class LinkedListQueue<T> {
 
 public static void main(String[] args) {
 	// TODO Auto-generated method stub
-	LinkedQueue bool  = new LinkedQueue(10);
+	LinkedListQueue<Float> bool  = new LinkedListQueue<>();
 	boolean exit = false;
 	String inputValue;
 	
@@ -91,7 +89,7 @@ public static void main(String[] args) {
 	int n = king.nextInt();
 	for(int k=0;k<n;k++)
 	{
-		bool.put(king.nextInt());			
+		bool.put(king.nextFloat());			
 	}
 	bool.showQueue();
 	command();
@@ -103,23 +101,23 @@ public static void main(String[] args) {
 			inputValue = king.next();
 			
 			switch(inputValue) {
-			case "last": System.out.println(bool.getLastElement());
+			case "last": System.out.println(bool.front());
 				break;
-			case "first": System.out.println(bool.getFrontElement());
+			case "first": System.out.println(bool.last());
 				break;
-			case "empty":	System.out.println(bool.isEmpty());
+			case "empty":	System.out.println(bool.empty());
 				break;
 			case "add":	System.out.println("Хэдэн тоо оруулах вэ?: ");
 			int p = king.nextInt();
 			for(int k=0;k<p;k++)
 			{
-				bool.put(king.nextInt());			
+				bool.put(king.nextFloat());			
 			}
 			System.out.println("Succesful!");
 				break;
 			case "remove":	bool.remove(); System.out.println("\nFirst element successfully removed!");
 				break;
-			case "show": 	System.out.println("Recent Queue: "); bool.showQueue();
+			case "show": 	System.out.println("Recent Queue: " + bool.showQueue());
 				break;
 			case "exit": {
 				king.close(); 
